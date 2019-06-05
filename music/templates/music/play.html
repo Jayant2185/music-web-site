@@ -1,0 +1,45 @@
+{% extends 'music/base.html' %}
+{% block title %}All Songs{% endblock %}
+{% block songs_active %}active{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid songs-container">
+     <audio controls autoplay="autoplay">
+         <source src="{{ url }}" id="source">
+        Your browser does not support the audio element.
+     </audio>
+    <button id="btnprev">PREV</button>
+    <button id="btnnext">NEXT</button>
+</div>
+
+{% for s in songs %}
+<p>{{ s.audio_file.url }}</p>
+{% endfor %}
+<script>
+ window.onload = function(){
+    var currcount = 0;
+    var songs = []
+    {% for s in songs %}
+        songs.push("{{ s.audio_file.url }}");
+    {% endfor %}
+    console.log('songs', songs)
+    document.getElementById("btnprev").onclick = function(){
+        if(0<currcount){
+            currcount--;
+            document.getElementById("source").src = songs[currcount];
+            console.log(currcount, " prev....");
+        }
+    }
+
+    document.getElementById("btnnext").onclick = function(){
+        if(songs.length>currcount){
+            currcount++;
+            document.getElementById("source").src = songs[currcount];
+            console.log(currcount, " next....");
+        }
+
+    }
+ };
+</script>
+{% endblock %}

@@ -1,0 +1,1 @@
+ERROR:MY_LOGGER:This error occurred: This is test message

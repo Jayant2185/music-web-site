@@ -1,0 +1,51 @@
+body{
+    background-color: cornsilk;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+img{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.display-area{
+    background-color: azure;
+    margin: 10px;
+}
+
+.rowurs{
+    width:100%;
+}
+
+.music-details{
+    height: 260px;
+    background-color: bisque;
+    padding: 20px;
+    margin: 10px;
+}
+
+.breif{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.hr{
+    height: 4px;
+    width: 90%;
+    background-color: gray;
+    border-radius: 50px;
+    margin: auto;
+}
+
+.songs{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.text{
+    color: black;
+}

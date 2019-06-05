@@ -1,0 +1,9 @@
+CREATE TABLE log(
+id int NOT NULL AUTO_INCREMENT,
+log_level int NULL,
+log_levelname char(32) NULL,
+log char(100) NOT NULL,
+created_at char(32) NOT NULL,
+created_by char(32) NOT NULL,
+PRIMARY KEY(id)
+)
